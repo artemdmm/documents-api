@@ -1,1 +1,4 @@
-".env"  
+/venv
+/documents
+/__pycache__
+**/__pycache__/
