@@ -1,0 +1,44 @@
+[project]
+name = "documents-api"
+version = "0.1.1"
+description = "Backend приложение для работы с документами"
+authors = [
+    {name = "artemdmm",email = "145367476+artemdmm@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiofiles (==24.1.0)",
+    "annotated-types (==0.7.0)",
+    "anyio (==4.9.0)",
+    "bcrypt (==4.3.0)",
+    "click (==8.2.1)",
+    "colorama (==0.4.6)",
+    "dnspython (==2.7.0)",
+    "email-validator (==2.2.0)",
+    "exceptiongroup (==1.3.0)",
+    "fastapi (==0.115.12)",
+    "greenlet (==3.2.2)",
+    "h11 (==0.16.0)",
+    "idna (==3.10)",
+    "passlib (==1.7.4)",
+    "psycopg2 (==2.9.10)",
+    "pydantic (==2.11.5)",
+    "pydantic-core (==2.33.2)",
+    "pyjwt (==2.10.1)",
+    "python-multipart (==0.0.20)",
+    "python-slugify (==8.0.4)",
+    "sniffio (==1.3.1)",
+    "sqlalchemy (==2.0.41)",
+    "sqlmodel (==0.0.24)",
+    "starlette (==0.46.2)",
+    "text-unidecode (==1.3)",
+    "typing-inspection (==0.4.1)",
+    "typing-extensions (==4.13.2)",
+    "uvicorn (==0.34.2)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
