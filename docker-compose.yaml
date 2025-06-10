@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: project
+    build: ./
+    depends_on:
+      - db
+    volumes:
+      - ./app:/src/app
+    ports:
+      - ${APP_HOST_PORT}:8000
+    restart: always
+    env_file:
+      - .env
+  db:
+    container_name: database
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=${POSTGRESS_DB_USER}
+      - POSTGRES_PASSWORD=${POSTGRESS_DB_PASSWORD}
+    ports:
+      - ${POSTGRESS_DB_HOST_PORT}:5432
+    volumes:
+      - .postgres:/var/lib/postgres/data
+    restart: always
